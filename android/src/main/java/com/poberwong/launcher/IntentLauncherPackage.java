@@ -14,7 +14,6 @@ import java.util.List;
  * Created by poberwong on 16/6/30.
  */
 public class IntentLauncherPackage implements ReactPackage{
-    @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Arrays.<NativeModule>asList(new IntentLauncherModule(reactContext)); // 返回一个NativeModule范型的数组就ok
     }
@@ -22,8 +21,6 @@ public class IntentLauncherPackage implements ReactPackage{
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
-
-    @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
     }
